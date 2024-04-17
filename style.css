@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --tertiary:#08D9D6;
+    --secondary:#252A34;
+    --primary:#FF2E63;
+    --neutral:#EAEAEA;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--neutral);
+}
+
+
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--secondary);
+    z-index: 999;
+}
+
+.loader{
+    width: 100vw;
+    height: 15vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom:0;
+}
+
+.ring{
+    height: 50px;
+    aspect-ratio: 1;
+    border: 7px solid var(--tertiary);
+    border-radius: 50%;
+    border-bottom:10px solid rgba(12, 0, 0, 0.265);
+    transform-origin: center;
+    animation: rot ease-in-out 1200ms infinite;
+}
+
+.hide{
+    display: none;
+}
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: scroll;
+    min-height: 50vh;
+    background-color: var(--neutral);
+    gap: 1rem;
+    padding-block: 2rem;
+    margin-top: 10vh;
+}
+
+
+
+.container > .card{
+    width: 25%;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.card .btns{
+    /* background-color: pink; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 100%;
+}
+.btns  button{
+    cursor: pointer;
+    width: 50px;
+    aspect-ratio: 1;
+    border: 1px solid var(--primary);
+    background: none;
+    color: var(--primary);
+    font-size: 1rem;
+    border-radius: 50%;
+    transition: all ease-in 500ms;
+}
+
+.btns button:hover{
+    border:none;
+    background-color: var(--primary);
+    color: var(--neutral);
+}
+
+.btns #like:active{
+    scale:0.1;
+}
+
+
+.card p{
+    font-size: 1.5em;
+    color: var(--secondary);
+}
+
+.card > img{
+    width: 300px;
+    border-radius: 20px;
+}
+
+
+
+
+@keyframes rot {
+    to{
+        rotate: 360deg;
+    }
+}
