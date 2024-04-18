@@ -1,7 +1,7 @@
 import config from "./config.js"
 
 const API_URL = "https://api.unsplash.com/photos/?client_id="
-const KEY = config.apikey
+const KEY = "vnRliGCjahGTyoRo-Nizjdyd0g_vV--BC8pA8zCSU2s"
 console.log(KEY)
 const container = document.querySelector(".container")
 
